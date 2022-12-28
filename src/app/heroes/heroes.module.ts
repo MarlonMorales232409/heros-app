@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddHeroComponent } from './add-hero/add-hero.component';
-import { FindHeroComponent } from './find-hero/find-hero.component';
-import { HeroComponent } from './hero/hero.component';
-import { HomeHeroComponent } from './home-hero/home-hero.component';
-import { ListHeroComponent } from './list-hero/list-hero.component';
+import { AddHeroComponent } from './pages/add-hero/add-hero.component';
+import { FindHeroComponent } from './pages/find-hero/find-hero.component';
+import { HeroComponent } from './pages/hero/hero.component';
+import { HomeHeroComponent } from './pages/home-hero/home-hero.component';
+import { ListHeroComponent } from './pages/list-hero/list-hero.component';
+import { EditHeroComponent } from './pages/edit-hero/edit-hero.component';
+import { HeroesRoutingModule } from './heroes-routing.module';
 
 
 
@@ -14,10 +16,12 @@ import { ListHeroComponent } from './list-hero/list-hero.component';
     FindHeroComponent,
     HeroComponent,
     HomeHeroComponent,
-    ListHeroComponent
+    ListHeroComponent,
+    EditHeroComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HeroesRoutingModule
   ]
 })
 export class HeroesModule { }
