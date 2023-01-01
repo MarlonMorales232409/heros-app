@@ -16,7 +16,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .card {
-    height: 575px;
+    height: 525px;
     border-radius: 8px;
     box-shadow: 1px 1px 9px #111;
     margin: 15px;

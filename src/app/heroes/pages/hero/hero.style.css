@@ -1,0 +1,29 @@
+.hero-info {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    column-gap: 20px;
+    
+
+}
+
+.hero-info__img-container {
+    text-align: center;
+}
+
+h2 {
+    text-align: left;
+    font-size: 22px;
+}
+
+p { 
+    font-size: 18px;
+}
+
+img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: 550px;
+    border-radius: 8px;
+}
+

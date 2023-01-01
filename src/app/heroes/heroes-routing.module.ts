@@ -1,11 +1,12 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListHeroComponent } from './pages/list-hero/list-hero.component';
+
 import { AddHeroComponent } from './pages/add-hero/add-hero.component';
 import { EditHeroComponent } from './pages/edit-hero/edit-hero.component';
 import { FindHeroComponent } from './pages/find-hero/find-hero.component';
 import { HeroComponent } from './pages/hero/hero.component';
 import { HomeHeroComponent } from './pages/home-hero/home-hero.component';
+import { ListHeroComponent } from './pages/list-hero/list-hero.component';
+import { NgModule } from '@angular/core';
 
 const routes: Routes = [
     {
@@ -21,7 +22,7 @@ const routes: Routes = [
                 component: AddHeroComponent
             },
             {
-                path: 'edit',
+                path: 'edit/:id',
                 component: EditHeroComponent
             },
             {

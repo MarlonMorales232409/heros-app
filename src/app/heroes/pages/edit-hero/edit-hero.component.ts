@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-edit-hero',
@@ -6,6 +8,12 @@ import { Component } from '@angular/core';
   styles: [
   ]
 })
-export class EditHeroComponent {
+export class EditHeroComponent implements OnInit {
 
+  constructor( private activatedRoute: ActivatedRoute){}
+
+  ngOnInit(): void {
+      this.activatedRoute.params
+      .subscribe( r => console.log(r))
+  }
 }

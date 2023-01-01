@@ -8,6 +8,8 @@ import { ListHeroComponent } from './pages/list-hero/list-hero.component';
 import { EditHeroComponent } from './pages/edit-hero/edit-hero.component';
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { MaterialModule } from '../material/material.module';
+import { HeroCardComponent } from './components/hero-card/hero-card.component';
+import { ImagePipe } from './pipes/image.pipe';
 
 
 
@@ -18,7 +20,9 @@ import { MaterialModule } from '../material/material.module';
     HeroComponent,
     HomeHeroComponent,
     ListHeroComponent,
-    EditHeroComponent
+    EditHeroComponent,
+    HeroCardComponent,
+    ImagePipe
   ],
   imports: [
     CommonModule,

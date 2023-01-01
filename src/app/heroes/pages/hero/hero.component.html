@@ -1,1 +1,49 @@
-<p>hero works!</p>
+
+<mat-grid-list 
+    cols="1" 
+    rowHeight="80vh"
+    *ngIf="!hero; else: heroInfo"
+>
+    <mat-grid-tile>
+        <mat-spinner color="accent"></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #heroInfo>
+    <div class="hero-info">
+
+        <div class="hero-info__img-container">
+            <h2>{{ hero.superhero }}</h2>
+            <mat-divider></mat-divider>
+            <br>
+            <img [src]="hero | image" alt="hero-image">
+        </div>
+
+        <div class="hero-info__info">
+            <h2>{{ hero.publisher }}</h2>
+            <mat-divider></mat-divider>
+            <br>
+
+            <div>
+                <p><strong>First Appearance:</strong> {{ hero.first_appearance }}</p>
+                <br>
+                <p><strong>Characters:</strong> {{ hero.characters }}</p>
+                <br>
+                <p><strong>Alter Ego</strong> {{ hero.alter_ego }}</p>
+                <br>
+                <p><strong>Publisher</strong> {{ hero.publisher }}</p>
+                <br>
+                <p><strong>Super Hero</strong> {{ hero.superhero }}</p>
+                <br>
+            </div>
+
+            <button 
+                mat-stroked-button 
+                color="accent"
+                (click)="goBack()"
+            >
+                Back
+            </button>
+        </div>
+    </div>
+</ng-template>
