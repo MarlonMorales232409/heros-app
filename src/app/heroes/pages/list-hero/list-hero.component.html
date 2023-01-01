@@ -1,1 +1,32 @@
-<p>list-hero works!</p>
+<h2>Hero list</h2>
+<hr>
+
+<div class="card-container">
+
+    
+    <mat-card *ngFor="let hero of heroes" class="card">
+            <img src="assets/heroes/{{ hero.id }}.jpg" alt="super hero" class="card__image">
+            
+            <div class="container">
+                <mat-card-title>{{ hero.superhero }}</mat-card-title>
+                <mat-card-subtitle>{{ hero.alter_ego }}</mat-card-subtitle>
+            </div>
+        
+        
+            <mat-card-content>
+                <h3>{{ hero.publisher }}</h3>
+                <p>{{ hero.first_appearance }}</p>
+            </mat-card-content>
+
+            <hr style="width: 90%;">
+
+            <mat-card-actions>
+                <button mat-button color="warn">Read more...</button>
+                <span class="spacer"></span>
+                <button mat-button color="info">Edit</button>
+            </mat-card-actions>
+        
+        </mat-card>
+
+</div>
+

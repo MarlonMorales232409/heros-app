@@ -2,3 +2,34 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card {
+    height: 575px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 9px #111;
+    margin: 15px;
+    padding: 10px;
+}
+
+.card__image {
+    max-width: 280px;
+    width: 280px;
+    max-height: 365px;
+    height: 365px;
+}
+
+.container {
+    padding: 0 15px;
+}

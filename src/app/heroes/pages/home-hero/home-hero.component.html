@@ -1,10 +1,65 @@
-<h1>Heres App</h1>
-<hr>
-<ul>
-    <li><a routerLink="/heroes/list" >List of Heroes</a></li>
-    <li><a routerLink="/heroes/add" >Add Hero</a></li>
-    <li><a routerLink="/heroes/edit" >Edit Hero</a></li>
-    <li><a routerLink="/heroes/find" >Find Hero</a></li>
-    <li><a routerLink="/heroes/25" >Hero</a></li>
-</ul>
-<router-outlet></router-outlet>
+
+
+<mat-sidenav-container fullscreen>
+
+    <mat-sidenav #sideNav>
+
+        <mat-toolbar>
+            <span>Heroes</span>
+            <span class="spacer"></span>
+            <button 
+                mat-icon-button 
+                (click)="sideNav.toggle()"
+            >
+                <mat-icon>menu</mat-icon>
+            </button>
+
+        </mat-toolbar>
+
+        <mat-nav-list>
+
+            <a routerLink="./list" 
+                mat-list-item
+                (click)="sideNav.toggle()"
+            >
+                <mat-icon matListItemIcon>label</mat-icon>
+                <span>Hero list</span>
+            </a>
+
+            <a routerLink="./add" 
+                mat-list-item
+                (click)="sideNav.toggle()"    
+            >
+                <mat-icon matListItemIcon>add</mat-icon>
+                <span>Add new</span>
+            </a>
+
+            <a routerLink="./find" 
+                mat-list-item
+                (click)="sideNav.toggle()"    
+            >
+                <mat-icon matListItemIcon>search</mat-icon>
+                <span>Search</span>
+            </a>
+
+
+        </mat-nav-list>
+
+
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button 
+            mat-icon-button 
+            (click)="sideNav.toggle()"
+        >
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span class="spacer"></span>
+        <button mat-button>Logout</button>
+    </mat-toolbar>
+
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+</mat-sidenav-container>
