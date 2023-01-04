@@ -23,7 +23,7 @@ const routes: Routes = [
             },
             {
                 path: 'edit/:id',
-                component: EditHeroComponent
+                component: AddHeroComponent
             },
             {
                 path: 'find',

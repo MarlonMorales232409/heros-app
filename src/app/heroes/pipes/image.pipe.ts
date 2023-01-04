@@ -9,7 +9,15 @@ export class ImagePipe implements PipeTransform {
 
   transform(hero: Hero): string {
 
-    return `assets/heroes/${ hero.id }.jpg`;
+    if(!hero.id && !hero.alt_image){
+      return 'assets/no-image.png'
+
+    }else if(hero.alt_image){
+      return hero.alt_image
+    }else{
+      return `assets/heroes/${ hero.id }.jpg`;
+    }
+
   }
 
 }

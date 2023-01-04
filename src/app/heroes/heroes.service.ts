@@ -19,4 +19,16 @@ export class HeroesService {
   getHeroById( id:string ): Observable<Hero>{
     return this.http.get<Hero>(`http://localhost:3000/heroes/${id}`)
   }
+  
+  getSuggestion( term: string ): Observable<Hero[]>{
+    return this.http.get<Hero[]>(`http://localhost:3000/heroes/?q=${term}&limit=6`)
+  }
+
+  addNewHero(hero: Hero): Observable<Hero>{
+    return this.http.post<Hero>('http://localhost:3000/heroes', hero)
+  }
+
+  updateHero(hero: Hero): Observable<Hero>{
+    return this.http.put<Hero>(`http://localhost:3000/heroes/${hero.id}`, hero)
+  }
 }
