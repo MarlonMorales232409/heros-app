@@ -111,6 +111,16 @@
         Save
     </button>
 
+    <button 
+        *ngIf="hero.id"
+        mat-raised-button 
+        color="warn"
+        (click)="deleteHero()"    
+    >
+        <mat-icon>remove</mat-icon>
+        Delete
+    </button>
+
 </div>
 
 <div class="image">
